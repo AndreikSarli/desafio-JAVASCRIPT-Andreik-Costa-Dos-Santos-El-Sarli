@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Contato | Ford Brasil</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="topo">
+        <img src="img/logo-ford-256.png" alt="Logo" />
+      </div>
+      <nav class="menu-topo">
+        <a href="index.html">Home</a>
+        <a href="lancamento.html">Lançamento</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+      <div class="espaco-topo"></div>
+    </header>
+
+    <main class="contato">
+      <section class="formulario-contato">
+        <div class="img-formulario">
+        <img src="img/xls 2.2 diesel.jpg" alt="Imagem Ranger XLS 2.2 " /></div>
+        <form>
+          <h2>Sobre você</h2>
+          <input
+            type="text"
+            placeholder="NOME *"
+            id="nome"
+            name="nome"
+            required
+          />
+          <label for="telefone"></label>
+          <input
+            type="tel"
+            placeholder="TELEFONE *"
+            id="telefone"
+            name="telefone"
+          />
+          <label for="email"></label>
+          <input
+            type="email"
+            placeholder="E-MAIL *"
+            id="email"
+            name="email"
+            required
+          />
+          <label for="email"></label>
+          <input type="text" placeholder="CPF *" id="CPF" name="CPF" required />
+          <label for="tipo"></label>
+          <select id="tipo" name="tipo" required>
+            <option value="" disabled selected>TIPO DE CONTATO</option>
+            <option value="elogio">Elogio</option>
+            <option value="reclamacao">Reclamação</option>
+            <option value="solicitacao">Solicitação</option>
+          </select>
+          <label for="mensagem"></label>
+          <textarea
+            id="mensagem"
+            placeholder="Digite sua mensagem"
+            name="mensagem"
+            required
+          ></textarea>
+          <div class="area-botao">
+          <button class="btn-formulario" type="submit">Enviar</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="redes-sociais">
+        <nav class="logos-redes-sociais">
+          <a
+            href="https://www.facebook.com/FordBrasil/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img src="img/facebook-50.png" alt="Logo Facebook"
+          /></a>
+          <a
+            href="https://www.youtube.com/fordbrasil"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img src="img/youtube-squared-50.png" alt="Logo youtube"
+          /></a>
+          <a
+            href="https://www.instagram.com/fordbrasil/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img src="img/instagram-logo-50.png" alt="Logo Instagram"
+          /></a>
+        </nav>
+      </div>
+      <a
+        href="https://www.ford.com.br/copyright/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="copyright"
+        >© 2026 Ford Motor Company - Todos os direitos reservados</a
+      >
+         <a
+        href="https://www.ford.com.br/copyright/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="copyright-mobile"
+        >© 2026 Ford</a
+      >
+      <div class="logo-footer">
+        <img src="img/ford-96.png" alt="logo ford" />
+      </div>
+    </footer>
+  </body>
+</html>
