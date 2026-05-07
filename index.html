@@ -7,7 +7,10 @@
     <title>Ford Brasil | Nova Ford Ranger 2022</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -28,13 +31,16 @@
         </div>
 
         <div class="imagem-home">
-          <a href="lancamento.html">
-            <img src="img/imagem_1.jpg" alt="Ranger Preta"
-          /></a>
+          <a id="carousel-link" href="lancamento.html">
+            <img id="carousel" src="img/imagem_1.jpg" alt="Ranger Preta" />
+          </a>
         </div>
+
         <div class="texto-home">
           <p>
-            Essa é a nova Ford Ranger 2022. Verifique novidades
+            <span id="carousel-title"> Essa é a nova Ford Ranger 2022. </span>
+
+            Verifique novidades
             <a href="lancamento.html">aqui.</a>
           </p>
         </div>
@@ -71,17 +77,19 @@
         >© 2026 Ford Motor Company - Todos os direitos reservados</a
       >
 
-       <a
+      <a
         href="https://www.ford.com.br/copyright/"
         target="_blank"
         rel="noopener noreferrer"
         class="copyright-mobile"
         >© 2026 Ford</a
       >
-      
+
       <div class="logo-footer">
         <img src="img/ford-96.png" alt="logo ford" />
       </div>
     </footer>
+    
+    <script src="js/carousel.js"></script>
   </body>
 </html>

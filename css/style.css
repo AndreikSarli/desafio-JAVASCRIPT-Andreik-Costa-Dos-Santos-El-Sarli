@@ -101,6 +101,8 @@ main.home {
   display: block;
   border-radius: 12px;
   padding-top: 4px;
+  transition: opacity 1.20s ease-in-out;
+  opacity: 1;
 }
 
 .texto-home p {
