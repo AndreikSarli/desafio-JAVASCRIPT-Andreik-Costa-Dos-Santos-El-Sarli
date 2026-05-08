@@ -57,7 +57,7 @@
               />
             </label>
             <label class="carro-info" for="carro1">
-              <input type="checkbox" id="carro1" />
+              <input type="checkbox" id="carro1" onchange="SetCarToCompare(this, new Car('XL Cabine Simples 2.2 Diesel 4X4 MT 2022', 183850, 511, 1821, 232, 1234, 2.2, 160, 1420, 'Aço Estampado 16', 'img/XL Cabine.jpg'));" />
               XL Cabine Simples 2.2 Diesel <br />4X4 MT 2022<img
                 src="img/info.png"
                 alt="info"
@@ -76,7 +76,7 @@
             />
             </label>
             <label class="carro-info">
-              <input type="checkbox" id="carro2"/> XLS 2.2 Diesel 4x4 AT 2022<img
+              <input type="checkbox" id="carro2" onchange="SetCarToCompare(this, new Car('XLS 2.2 Diesel 4x4 AT 2022', 220690, 511, 1821, 232, 1076, 2.2, 160, 1180, 'Aço Estampado 16', 'img/xls 2.2 diesel.jpg'));" /> XLS 2.2 Diesel 4x4 AT 2022<img
                 src="img/info.png"
                 alt="info"
             /></label>
@@ -88,7 +88,7 @@
             <img class="img-carro" src="img/storm.jpg" alt="Ranger-Storm" />
             </label>
             <label class="carro-info">
-              <input type="checkbox" id="carro3" /> Storm 3.2 Diesel 4X4 AT 2022<img
+              <input type="checkbox" id="carro3" onchange="SetCarToCompare(this, new Car('Storm 3.2 Diesel 4X4 AT 2022', 222790, 511, 1821, 232, 1040, 3.2, 200, 1180, 'Liga Leve 17', 'img/storm.jpg'));" /> Storm 3.2 Diesel 4X4 AT 2022<img
                 src="img/info.png"
                 alt="info"
             /></label>
@@ -96,8 +96,98 @@
           </div>
         </div>
         <div class="comparar">
-          <button class="btn-comparar">Comparar</button>
-        </div>
+    <button class="btn-comparar" onclick="ShowCompare()">Comparar</button>
+</div>
+
+  <div id="overlay" onclick="HideCompare()"></div>
+
+<div id="compare">
+  <div class="compare-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Especificações</th>
+          <th id="compare_image_0"></th>
+          <th id="compare_image_1"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Modelo</td>
+          <td id="compare_modelo_0"></td>
+          <td id="compare_modelo_1"></td>
+        </tr>
+
+        <tr>
+          <td>Altura da caçamba (mm)</td>
+          <td id="compare_alturacacamba_0"></td>
+          <td id="compare_alturacacamba_1"></td>
+        </tr>
+
+        <tr>
+          <td>Altura do veículo (mm)</td>
+          <td id="compare_alturaveiculo_0"></td>
+          <td id="compare_alturaveiculo_1"></td>
+        </tr>
+
+        <tr>
+          <td>Altura livre do solo (mm)</td>
+          <td id="compare_alturasolo_0"></td>
+          <td id="compare_alturasolo_1"></td>
+        </tr>
+
+        <tr>
+          <td>Capacidade de carga (Kg)</td>
+          <td id="compare_capacidadecarga_0"></td>
+          <td id="compare_capacidadecarga_1"></td>
+        </tr>
+
+        <tr>
+          <td>Motor</td>
+          <td id="compare_motor_0"></td>
+          <td id="compare_motor_1"></td>
+        </tr>
+
+        <tr>
+          <td>Potência (cv)</td>
+          <td id="compare_potencia_0"></td>
+          <td id="compare_potencia_1"></td>
+        </tr>
+
+        <tr>
+          <td>Volume de caçamba (L)</td>
+          <td id="compare_volumecacamba_0"></td>
+          <td id="compare_volumecacamba_1"></td>
+        </tr>
+
+        <tr>
+          <td>Roda</td>
+          <td id="compare_roda_0"></td>
+          <td id="compare_roda_1"></td>
+        </tr>
+
+        <tr>
+          <td>Preço</td>
+          <td id="compare_preco_0"></td>
+          <td id="compare_preco_1"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="text-align:center; padding:20px;">
+      <button
+        type="button"
+        class="btn-fechar"
+        onclick="HideCompare()"
+      >
+        Fechar Comparação
+      </button>
+    </div>
+  </div>
+</div>
+
+<script src="js/compare.js"></script>
       </section>
     </main>
 
