@@ -93,12 +93,12 @@ main.home {
   display: flex;
   justify-content: center;
   background-color: #ffffff;
-  background-position: center 4px; 
+  background-position: center; 
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 10px;
   overflow: hidden;
   position: relative;
+  border-radius: 12px;
 }
 
 .imagem-home img {
@@ -106,8 +106,8 @@ main.home {
   max-width: 100%;
   height: auto;
   display: block;
-  border-radius: 0px;
-  padding-top: 4px;
+  border-radius: 12px;
+  padding-top: 0px;
   transition: opacity 0.9s ease-in-out; 
   opacity: 1;
 }

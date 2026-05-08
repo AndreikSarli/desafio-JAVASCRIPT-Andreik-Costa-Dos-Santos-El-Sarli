@@ -20,7 +20,7 @@ class Carousel {
 
     Carousel.Next();
 
-    // dots click (✔ ADICIONADO)
+    // dots click 
     const dots = document.querySelectorAll(".dot");
     dots.forEach((dot) => {
       dot.addEventListener("click", () => {
@@ -30,10 +30,10 @@ class Carousel {
 
     Carousel._interval = setInterval(function () {
       Carousel.Next();
-    }, 2000);
+    }, 6000);
   }
 
-  // ✔ NOVO: ir direto pro slide
+  // ir pro slide
   static GoTo(index) {
     Carousel._sequence = index;
     Carousel._firstLoad = false;
@@ -82,7 +82,7 @@ class Carousel {
       }, 250);
     }
 
-    // ✔ UPDATE DOTS (ADICIONADO)
+    
     const dots = document.querySelectorAll(".dot");
     dots.forEach((d) => d.classList.remove("active"));
     if (dots[Carousel._sequence]) {
@@ -107,7 +107,7 @@ carouselArr.push(
 );
 
 carouselArr.push(
-  new Carousel("img/imagem_3.jpg", "Nova Ford Bronco Sport 2022.", "#")
+  new Carousel("img/imagem_3.jpg", "Nova Ford Bronco Sport 2022.", "lancamento.html")
 );
 
 // Inicio
