@@ -54,16 +54,22 @@ function SetCarToCompare(el, carClass) {
 
 function ShowCompare() {
     if(carArr.length < 2) {
-        alert("Precisa marcar 2 carros para apresentar a comparação");
+        alert("Precisa marcar 2 carros para apresentar a comparação.");
         return;
     }
 
     UpdateCompareTable();
+    document.getElementById("overlay").style.display = "block";
     document.getElementById("compare").style.display = "flex";
+
+    document.body.style.overflow = "hidden";
 }
 
 function HideCompare(){
+    document.getElementById("overlay").style.display = "none";
     document.getElementById("compare").style.display = "none"; 
+
+    document.body.style.overflow = "auto";
 }
 
 function UpdateCompareTable() {
