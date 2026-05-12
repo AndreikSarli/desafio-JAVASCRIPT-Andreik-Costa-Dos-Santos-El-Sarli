@@ -25,7 +25,7 @@
       <section class="formulario-contato">
         <div class="img-formulario">
         <img src="img/xls 2.2 diesel.jpg" alt="Imagem Ranger XLS 2.2 " /></div>
-        <form>
+        <form onsubmit="Enviar(event)">
           <h2>Sobre você</h2>
           <input
             type="text"
@@ -36,10 +36,12 @@
           />
           <label for="telefone"></label>
           <input
-            type="tel"
+            type="text"
             placeholder="TELEFONE *"
             id="telefone"
             name="telefone"
+            maxlength="15"
+            required
           />
           <label for="email"></label>
           <input
@@ -50,7 +52,7 @@
             required
           />
           <label for="email"></label>
-          <input type="text" placeholder="CPF *" id="CPF" name="CPF" required />
+          <input type="text" placeholder="CPF *" id="cpf" name="cpf" maxlength="14" required />
           <label for="tipo"></label>
           <select id="tipo" name="tipo" required>
             <option value="" disabled selected>TIPO DE CONTATO</option>
@@ -113,5 +115,6 @@
         <img src="img/ford-96.png" alt="logo ford" />
       </div>
     </footer>
+    <script src="js/form.js"></script>
   </body>
 </html>
