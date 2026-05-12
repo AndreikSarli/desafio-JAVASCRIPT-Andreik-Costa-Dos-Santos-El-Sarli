@@ -662,14 +662,14 @@ select {
   /*  Home - mobile */
 
   main.home {
-    min-height: 75vh;
+    min-height: auto;
     padding-top: 10px;
   }
 
   .home-conteudo {
     gap: 8px;
     padding: 0 4px;
-    padding-top: 50px;
+    padding-top: 30px;
   }
 
   .texto2-home {
@@ -694,8 +694,10 @@ select {
 
   .imagem-home {
     overflow: hidden;
-    height: 40vh;
-     border-radius: 2px;
+    height: 40dvh;
+    border-radius: 2px;
+    min-height: 180px;
+    max-height: 290px;
   }
 
   .imagem-home img {
