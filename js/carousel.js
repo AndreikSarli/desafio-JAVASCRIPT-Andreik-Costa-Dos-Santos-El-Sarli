@@ -28,6 +28,14 @@ class Carousel {
       });
     });
 
+    // miniaturas click
+const thumbs = document.querySelectorAll(".miniatura");
+thumbs.forEach((thumb) => {
+  thumb.addEventListener("click", () => {
+    Carousel.GoTo(Number(thumb.dataset.index));
+  });
+});
+
     Carousel._interval = setInterval(function () {
       Carousel.Next();
     }, 6000);
@@ -89,12 +97,22 @@ class Carousel {
       dots[Carousel._sequence].classList.add("active");
     }
 
+    // miniaturas active
+const thumbs = document.querySelectorAll(".miniatura");
+thumbs.forEach((t) => t.classList.remove("active-thumb"));
+
+if (thumbs[Carousel._sequence]) {
+  thumbs[Carousel._sequence].classList.add("active-thumb");
+}
+
     Carousel._sequence++;
 
     if (Carousel._sequence >= Carousel._size) {
       Carousel._sequence = 0;
     }
   }
+
+  
 }
 
 // Slides

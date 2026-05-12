@@ -5,13 +5,21 @@
 }
 
 /* Person do header */
+
+
+html{
+  height: 100%;
+}
+
+
 body {
   margin: 0;
-  min-height: 100vh;
+  min-height: 100dvh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   font-family: "Segoe UI", Arial, sans-serif;
-  background-color: #f3f3f3;
+  background-color: #ffffff;
 }
 
 header {
@@ -102,7 +110,7 @@ main.home {
 }
 
 .imagem-home img {
-  width: 104.2rem;
+  width: 100%;
   max-width: 100%;
   height: auto;
   display: block;
@@ -116,8 +124,8 @@ main.home {
   max-width: 500px;
   line-height: 1.5;
   text-align: center;
-  font-size: 14px;
-  margin-top: 3px;
+  font-size: 19px;
+  margin-top: 8px;
   font-family: "Orbitron", Arial, sans-serif;
   font-weight: 600;
   color: #091d8a;
@@ -158,8 +166,38 @@ main.home {
   transform: scale(1.2);
 }
 
+.carousel-miniaturas {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.miniatura {
+  width: 90px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.miniatura:hover {
+  opacity: 1;
+  transform: scale(1.03);
+}
+
+.active-thumb {
+  opacity: 1;
+  border: 2px solid #135bf7;
+}
+
 main {
   width: 100%;
+  flex: 1;
 }
 
 /* Footer  */
@@ -677,7 +715,7 @@ select {
     font-family: "Orbitron", sans-serif;
     font-weight: 700;
     margin-top: -20px;
-    margin-bottom: 25px;
+    margin-bottom: 8px;
     color: #070e37;
     text-align: center;
   }
@@ -694,7 +732,7 @@ select {
 
   .imagem-home {
     overflow: hidden;
-    height: 40dvh;
+    height: 30dvh;
     border-radius: 2px;
     min-height: 180px;
     max-height: 290px;
@@ -711,7 +749,7 @@ select {
   .texto-home p {
     font-size: 12.5px;
     padding: 0 8px;
-    margin-top: 10px;
+    margin-top: 2px;
   }
 
   /* Lançamento Carros - Mobile */
