@@ -643,21 +643,24 @@ select {
 @media (max-width: 768px) {
   header {
     flex-direction: column;
-    gap: 10px;
+    gap: 2px;
+    padding: 8px 5px;
   }
   header nav {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
+    
   }
 
   header nav a {
     padding: 10px 12px;
+    font-size: 16px;
   }
 
   header img {
-    height: 40px;
-    margin-left: 4px;
+    height: 35px;
+    margin-left: 10px;
   }
 
   /*  Home - mobile */
@@ -813,7 +816,7 @@ select {
   }
 
   .img-formulario {
-    width: 100%;
+    width: 75%;
     margin-left: 10px;
   }
 
@@ -868,6 +871,7 @@ select {
   .redes-sociais {
     padding-left: 2px;
     gap: 5px;
+    margin-left: 4px;
   }
 
   .logos-redes-sociais {
@@ -880,7 +884,7 @@ select {
   .logo-footer img {
     width: 50%;
     height: auto;
-    margin-right: -23px;
+    margin-right: -35px;
   }
 
   .copyright-mobile{
@@ -891,7 +895,7 @@ select {
     transform: none;
     margin-left: auto;
     margin: 10px 0;
-    margin-left: -2px; 
+    margin-left: -8px; 
     flex: 1;  
   }
 
