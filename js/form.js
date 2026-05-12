@@ -1,27 +1,89 @@
-
-//class contato
-
-class contato {
-    
+class Contato {
+  constructor(nome, telefone, email, cpf, tipo, mensagem) {
+    this.nome = nome;
+    this.telefone = telefone;
+    this.email = email;
+    this.cpf = cpf;
+    this.tipo = tipo;
+    this.mensagem = mensagem;
+  }
 }
 
-function Post(form) {
+function Enviar(event) {
+  event.preventDefault();
 
-  let data = new contato(form.elements.namedItem("nome").value,
-            form.elements.namedItem("sobrenome").value, 
-            form.elements.namedItem("email").value, 
-            form.elements.namedItem("cpf").value, 
-            form.elements.namedItem("telefone").value, 
-            form.elements.namedItem("contato").value);
-  
+  const contato = new Contato(
+    document.getElementById("nome").value,
+    document.getElementById("telefone").value,
+    document.getElementById("email").value,
+    document.getElementById("cpf").value,
+    document.getElementById("tipo").value,
+    document.getElementById("mensagem").value
+  );
+
+  alert(
+    `Obrigado, ${contato.nome}! Seus dados foram enviados com sucesso.`
+  );
+
+  console.log(contato);
+  event.target.reset();
 }
 
-function Enviar() {
+// Telefone
+const telefoneInput = document.getElementById("telefone");
 
-    var nome = document.getElementById("nomeid");
+telefoneInput.addEventListener("input", function (e) {
 
-    if (nome.value != "") {
-        alert('Obrigado sr(a) ' + nome.value + ' os seus dados foram encaminhados com sucesso');
-    }
+  let valor = e.target.value.replace(/\D/g, "");
 
-}
+  valor = valor.slice(0, 11);
+
+  if (valor.length > 10) {
+    valor = valor.replace(
+      /^(\d{2})(\d{5})(\d{4}).*/,
+      "($1) $2-$3"
+    );
+  } else if (valor.length > 6) {
+    valor = valor.replace(
+      /^(\d{2})(\d{4})(\d+)/,
+      "($1) $2-$3"
+    );
+  } else if (valor.length > 2) {
+    valor = valor.replace(
+      /^(\d{2})(\d+)/,
+      "($1) $2"
+    );
+  }
+
+  e.target.value = valor;
+});
+
+// CPF
+
+const cpfInput = document.getElementById("cpf");
+
+cpfInput.addEventListener("input", function (e) {
+
+  let valor = e.target.value.replace(/\D/g, "");
+
+  valor = valor.slice(0, 11);
+
+  if (valor.length > 9) {
+    valor = valor.replace(
+      /^(\d{3})(\d{3})(\d{3})(\d{2}).*/,
+      "$1.$2.$3-$4"
+    );
+  } else if (valor.length > 6) {
+    valor = valor.replace(
+      /^(\d{3})(\d{3})(\d+)/,
+      "$1.$2.$3"
+    );
+  } else if (valor.length > 3) {
+    valor = valor.replace(
+      /^(\d{3})(\d+)/,
+      "$1.$2"
+    );
+  }
+
+  e.target.value = valor;
+});
