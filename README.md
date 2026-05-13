@@ -1,6 +1,6 @@
 # desafio-6-JS
 
-# 🚗 Ford Ranger 2022 \| Desafio JavaScript
+# 🚗 Ford | Desafio JavaScript
 
 Projeto desenvolvido como desafio prático utilizando **HTML, CSS e
 JavaScript puro**, com foco em:
@@ -15,7 +15,7 @@ JavaScript puro**, com foco em:
 
 ## 📖 Sobre o projeto
 
-O projeto simula uma **landing page da Ford Ranger 2022**, contendo:
+O projeto simula uma **landing page da Ford**, contendo:
 
 -   ✅ Página inicial responsiva\
 -   ✅ Página de lançamento dos veículos\
