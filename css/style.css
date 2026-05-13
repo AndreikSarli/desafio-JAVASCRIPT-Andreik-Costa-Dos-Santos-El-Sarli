@@ -122,13 +122,13 @@ main.home {
 
 .texto-home p {
   max-width: 500px;
-  line-height: 1.5;
+  line-height: 1.2;
   text-align: center;
   font-size: 19px;
   margin-top: 8px;
   font-family: "Orbitron", Arial, sans-serif;
   font-weight: 600;
-  color: #091d8a;
+  color: #2c3da0;
 }
 
 .texto-home a {
@@ -141,6 +141,7 @@ main.home {
 .texto-home a:hover {
   color: #1b3572;
 }
+
 
 .carousel-dots {
   position: absolute;
@@ -716,18 +717,19 @@ select {
     font-weight: 700;
     margin-top: -20px;
     margin-bottom: 8px;
-    color: #070e37;
+    color: #00407c;
     text-align: center;
   }
 
   .texto2-home p {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 700;
     letter-spacing: 1px;
+    white-space: nowrap;
     text-transform: uppercase;
-    max-width: 260px;
+    max-width: 100%;
     margin: 0 auto;
-    line-height: 1.3;
+    line-height: 1;
   }
 
   .imagem-home {

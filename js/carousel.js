@@ -59,7 +59,7 @@ thumbs.forEach((thumb) => {
     if (Carousel._firstLoad) {
 
       if (Carousel._sequence === 0) {
-        title.innerHTML = `${slide.title} Verifique novidades <a href="lancamento.html">aqui.</a>`;
+        title.innerHTML = `${slide.title} <br>Verifique novidades <a href="lancamento.html">aqui</a>`;
       } else {
         title.innerHTML = slide.title;
       }
@@ -75,7 +75,7 @@ thumbs.forEach((thumb) => {
       setTimeout(() => {
 
         if (Carousel._sequence === 1) {
-          title.innerHTML = `Esta é a nova Ford Ranger 2022. Verifique novidades <a href="lancamento.html">aqui.</a>`;
+          title.innerHTML = `Esta é a nova Ford Ranger 2022 <br>Verifique novidades <a href="lancamento.html">aqui</a>`;
         } else {
           title.innerHTML = slide.title;
         }
@@ -117,15 +117,15 @@ if (thumbs[Carousel._sequence]) {
 
 // Slides
 carouselArr.push(
-  new Carousel("img/imagem_1.jpg", "Esta é a nova Ranger Ford 2022.", "lancamento.html")
+  new Carousel("img/imagem_1.jpg", "Esta é a nova Ranger Ford 2022", "lancamento.html")
 );
 
 carouselArr.push(
-  new Carousel("img/imagem_2.jpg", "Ford: conheça a nossa história.", "#")
+  new Carousel("img/imagem_2.jpg", "Ford: conheça a nossa história", "#")
 );
 
 carouselArr.push(
-  new Carousel("img/imagem_3.jpg", "Nova Ford Bronco Sport 2022.", "lancamento.html")
+  new Carousel("img/imagem_3.jpg", "Nova Ford Bronco Sport 2022", "lancamento.html")
 );
 
 // Inicio
