@@ -11,6 +11,7 @@ class Contato {
   }
 }
 
+// Função enviar o formulário
 function Enviar(event) {
   event.preventDefault();
 
@@ -28,10 +29,10 @@ function Enviar(event) {
   );
 
   console.log(contato);
-  event.target.reset();
+  event.target.reset(); // Limpar o formulário após o envio
 }
 
-// Telefone
+// Telefone 
 const telefoneInput = document.getElementById("telefone");
 
 telefoneInput.addEventListener("input", function (e) {
@@ -56,7 +57,7 @@ telefoneInput.addEventListener("input", function (e) {
       "($1) $2"
     );
   }
-
+// Atualizar o valor do campo telefone
   e.target.value = valor;
 });
 
@@ -86,6 +87,6 @@ cpfInput.addEventListener("input", function (e) {
       "$1.$2"
     );
   }
-
+// Atualizar o valor do campo CPF
   e.target.value = valor;
 });

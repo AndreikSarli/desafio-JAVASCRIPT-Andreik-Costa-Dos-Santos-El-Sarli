@@ -1,7 +1,8 @@
 
-//car
+// Array para armazenar os carros
 let carArr = [];
 
+// Classe carros
 class Car {
    
 
@@ -21,7 +22,7 @@ class Car {
     }
 } 
 
-
+// Função para obter a posição do carro no array de comparação
 function GetCarArrPosition(arr, carClass) {
     for(let i = 0; i < arr.length; i++){
         if(arr[i].nome  === carClass.nome)
@@ -30,6 +31,7 @@ function GetCarArrPosition(arr, carClass) {
     return -1;
 }
 
+// Função para adicionar ou remover um carro da comparação
 function SetCarToCompare(el, carClass) {
     if (carClass instanceof Car) {
         if (el.checked) {
@@ -52,6 +54,7 @@ function SetCarToCompare(el, carClass) {
     }
 }
 
+// Função para mostrar a comparação
 function ShowCompare() {
     if(carArr.length < 2) {
         alert("Precisa marcar 2 carros para apresentar a comparação.");
@@ -65,6 +68,7 @@ function ShowCompare() {
     document.body.style.overflow = "hidden";
 }
 
+// Função para ocultar a comparação
 function HideCompare(){
     document.getElementById("overlay").style.display = "none";
     document.getElementById("compare").style.display = "none"; 
@@ -72,6 +76,7 @@ function HideCompare(){
     document.body.style.overflow = "auto";
 }
 
+// Função para atualizar a tabela de comparação
 function UpdateCompareTable() {
     for (let i = 0; i < 2; i++) {
         document.getElementById(`compare_image_${i}`).innerHTML = `<img src="${carArr[i].image}" style="width: 150px;">`;
@@ -87,7 +92,7 @@ function UpdateCompareTable() {
         document.getElementById(`compare_preco_${i}`).innerText = "R$ " + carArr[i].preco.toLocaleString('pt-BR');
     }
 }
-
+// Fechar a comparação ao clicar fora da tabela
 document.addEventListener("keydown", function(event) {
     if (event.key === "Escape") {
         HideCompare();
